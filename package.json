@@ -1,0 +1,21 @@
+{
+  "name": "@dariuski/microserver",
+  "version": "1.9.1",
+  "description": "HTTP MicroServer",
+  "keywords": [
+    "http",
+    "microserver",
+    "server",
+    "httpserver"
+  ],
+  "type": "module",
+  "main": "microserver.js",
+  "author": "Darius Kisonas",
+  "license": "MIT",
+  "homepage": "https://github.com/dariuski/microserver",
+  "bugs": "https://github.com/dariuski/microserver/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariuski/microserver.git"
+  }
+}
