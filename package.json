@@ -1,6 +1,6 @@
 {
-  "name": "micro-server",
-  "version": "1.9.1",
+  "name": "@dariuski/microserver",
+  "version": "1.9.2",
   "description": "HTTP MicroServer",
   "keywords": [
     "http",

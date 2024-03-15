@@ -1,5 +1,5 @@
 /**
- * MicroServer v1.9.1
+ * MicroServer v1.9.2
  * @copyright Darius Kisonas 2022
  * @license MIT
  */

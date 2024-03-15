@@ -30,15 +30,14 @@ Features:
 Simple router:
 
 ```js
-import { MicroServer } from 'micro-server'
+import { MicroServer } from '@dariuski/microserver'
 
 const server = new MicroServer({
   listen: 8080,
   auth: {
     users: {
       usr: {
-        password: 'secret',
-        acl: {user: true}
+        password: 'secret'
       }
     }
   }
@@ -48,14 +47,14 @@ server.use('POST /api/login', (req,res) => {
   const user = await req.auth.login(req.body.user, req.body.password)
   return user ? {user} : 403
 })
-server.use('GET /api/protected', 'acl:user', (req,res) => ({message:'Protected'}))
+server.use('GET /api/protected', 'acl:auth', (req,res) => ({message:'Secret resource'}))
 server.use('static', {root:'public'})
 ```
 
 Using `Controller` class:
 
 ```js
-import { MicroServer, Controller } from 'micro-server'
+import { MicroServer, Controller } from '@dariuski/microserver'
 
 class RestApi extends Controller {
   static acl = '' // default acl
@@ -93,7 +92,7 @@ server.use('/api', RestApi)
 `Model.handler` automatically detects usage for standard functions: get,insert,update,delete
 
 ```js
-import { MicroServer, Model, MicroCollection, FileStore } from 'micro-server'
+import { MicroServer, Model, MicroCollection, FileStore } from '@dariuski/microserver'
 
 const usersCollection = new MicroCollection({ store: new FileStore({ dir: 'data' }), name: 'users' })
 //const usersCollection = await db.collection('users')
