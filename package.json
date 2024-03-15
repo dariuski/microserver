@@ -1,5 +1,5 @@
 {
-  "name": "@dariuski/microserver",
+  "name": "micro-server",
   "version": "1.9.1",
   "description": "HTTP MicroServer",
   "keywords": [

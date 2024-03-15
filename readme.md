@@ -30,7 +30,7 @@ Features:
 Simple router:
 
 ```js
-import { MicroServer } from '@dariuski/microserver'
+import { MicroServer } from 'micro-server'
 
 const server = new MicroServer({
   listen: 8080,
@@ -55,7 +55,7 @@ server.use('static', {root:'public'})
 Using `Controller` class:
 
 ```js
-import { MicroServer, Controller } from '@dariuski/microserver'
+import { MicroServer, Controller } from 'micro-server'
 
 class RestApi extends Controller {
   static acl = '' // default acl
@@ -93,7 +93,7 @@ server.use('/api', RestApi)
 `Model.handler` automatically detects usage for standard functions: get,insert,update,delete
 
 ```js
-import { MicroServer, Model, MicroCollection, FileStore } from '@dariuski/microserver'
+import { MicroServer, Model, MicroCollection, FileStore } from 'micro-server'
 
 const usersCollection = new MicroCollection({ store: new FileStore({ dir: 'data' }), name: 'users' })
 //const usersCollection = await db.collection('users')
